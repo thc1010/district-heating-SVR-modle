@@ -13,3 +13,11 @@
 改模型建立主要用到 SVR POLY核函数，和自研的核函数
 数据维度处理，空值用到的是 随机森林和插值法，数据维度选取时，利用时差相关性分析。
 模型参数寻优目前是网格搜索法
+
+
+
+Model introduction: established a secondary district heating system model which including three parts . one is the hydraulic model of the heat-exchange station, the other is the thermal model of the heat-exchange station, and the third is the building unit control model
+
+The hydraulic model of the heat exchange station: Calculate the energy consumption of the pump according to the flow rate and the minimum user pressure. In the actual project, it can guide the operation mode of the pump, and the target heat station can effectively send the heat to the user. The outdoor temperature and flow rate are used to calculate the heat supply or heat consumption of the primary network, and guide the heat supply operation mode of the heat exchange station in the actual project. : Calculate the pressure difference between the supply and return water of the unit according to the outdoor temperature, unit return water temperature, indoor temperature and other data. In the actual project, it can be determined that the room temperature of the building unit is satisfied. The fundamental purpose is to distribute the heat between the units through the unit valve.
+
+Introduction to the algorithm: The SVR POLY kernel function and the self-developed kernel function are mainly used in the establishment of the modified model for data dimension processing. Random forest and interpolation method are used for null values. When the data dimension is selected, the time difference correlation analysis is used. Model parameter optimization is currently a grid search method
